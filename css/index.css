@@ -17,7 +17,7 @@ nav .container h1{
     font-size:clamp(30px,6vw,45px);
     letter-spacing: 2px;
 }
-nav .container .burger{
+nav .container #menu{
     display: none;
 }
 nav .container ul{
