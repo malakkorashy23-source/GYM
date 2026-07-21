@@ -26,13 +26,16 @@
         background-color: #fff;
     }
 
-    nav .container ul{
-        width: 80%;
-        background-color:#000;
+    nav .container .cont{
         position: absolute;/*moving in relation to nav*/
-        bottom:-10px;
+        bottom: -10px;
         left: 50%;
         transform: translate(-50%,100%);
+        width: 80%;
+        z-index: 1000;
+    }
+    nav .container .cont ul{
+        background-color:#000;
         flex-direction: column;/*affect of li items*/
         justify-content: center;
         row-gap: 15px;
@@ -41,10 +44,10 @@
         transition-duration: 1s;
         overflow: hidden;
     }
-    nav .container #menu:checked~ul{
+    nav .container #menu:checked~.cont ul{
         height:310px;
         padding-block: 15px;
-        z-index: 1000;
+         
     }
     nav .container ul li{
         margin: auto;
@@ -364,15 +367,21 @@
     nav .container .burger{ /*return to defult*/
         display: none;
     }
-    nav .container ul{
+
+    nav .container .cont{
+        background-color: transparent;
+        left: 45%;
+        bottom: 10px;
+        transform: translate(0%,0%);
+        width: 50%;
+    }
+    
+    nav .container .cont ul{
         background-color: transparent;
         width: initial;
         height: initial;
-        bottom: 10px;
-        left: 40%;
-        transform: translate(0%,0%);
         flex-direction: row;
-        column-gap: 15px;
+        column-gap: 10px;
     }
     
     /* -- -------- CLIENTS bage---------- -- */
